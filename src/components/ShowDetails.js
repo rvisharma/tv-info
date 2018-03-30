@@ -1,8 +1,9 @@
 import React from 'react';
-import { getSeasonsByShowId } from '../api';
+import { getSeasonsByShowId, getEpisodeForSeason } from '../api';
 
 import SeasonList from './SeasonList';
 import SeasonInfo from './SeasonInfo';
+import EpisodeList from './EpisodeList';
 
 export default class ShowDetails extends React.Component {
   constructor(props) {
@@ -40,12 +41,20 @@ export default class ShowDetails extends React.Component {
         });
   }
 
+  getEpisodeForSeason = async seasonId => {
+    const episodes = await getEpisodeForSeason(seasonId);
+    this.setState({
+      episodes
+    });
+  };
+
   handleSeasonClick = seasonId => {
     this.setState(state => {
       return {
         selectedSeason: state.seasons.filter(s => s.id === seasonId)[0]
       };
     });
+    this.getEpisodeForSeason(seasonId);
   };
 
   render() {
@@ -55,6 +64,7 @@ export default class ShowDetails extends React.Component {
       <div>
         <SeasonList seasons={seasons} onSeasonClick={this.handleSeasonClick} />
         <SeasonInfo season={this.state.selectedSeason} />
+        <EpisodeList episodes={this.state.episodes} />
       </div>
     ) : null;
   }

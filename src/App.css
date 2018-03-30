@@ -27,8 +27,12 @@ body {
 /* HEADER */
 .header {
   margin-bottom: 1rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 100;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  /* background: red; */
+  text-align: right;
 }
 
 /* SEARCH BAR */
@@ -140,6 +144,7 @@ body {
 
 .show-info_summary {
   font-size: 1.5rem;
+  letter-spacing: 1px;
 }
 
 /* SEASON LIST */
@@ -188,11 +193,13 @@ body {
   padding: 1rem;
   justify-content: space-between;
   font-weight: 100;
+  margin-bottom: 1rem;
 }
 
 .season-info_summary {
   padding: 0.5rem;
   align-self: flex-start;
+  opacity: 0.8;
 }
 
 .season-info_title {
@@ -215,9 +222,75 @@ body {
   text-align: right;
 }
 
+/* EPISODE LIST */
+
+.episode-list {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  /* outline: 1px solid black; */
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.episode {
+  display: flex;
+  flex-basis: 49%;
+  list-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.3rem;
+  padding: 0.6rem;
+  font-size: 1rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
+.episode_img {
+  margin-right: 0.5rem;
+  align-self: center;
+}
+
+.episode_detail {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.episode_datetime {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  opacity: 0.5;
+}
+
+.episode_title {
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-weight: 200;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.episode_summary {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
 /* MEDIA */
 
+@media (max-width: 1024px) {
+  .episode-list {
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .header {
+    text-align: center;
+  }
   .results-section {
     flex-direction: column;
   }
@@ -257,5 +330,20 @@ body {
     width: 100%;
     justify-content: space-around;
     font-size: 1.5rem;
+  }
+
+  /* Episode list */
+  .episode-list {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .episode {
+    flex-direction: column;
+  }
+
+  .episode_img {
+    margin-right: 0;
   }
 }
