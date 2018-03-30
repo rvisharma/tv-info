@@ -18,9 +18,6 @@ const Header = () => {
 };
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
   state = { searchTerm: '', searchResults: [], selectedShow: undefined };
 
   handleSearchSubmit = async searchTerm => {

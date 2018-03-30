@@ -6,10 +6,6 @@ import SeasonInfo from './SeasonInfo';
 import EpisodeList from './EpisodeList';
 
 export default class ShowDetails extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   state = {
     seasons: undefined,
     selectedSeason: undefined,
