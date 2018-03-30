@@ -1,6 +1,12 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 export default class SeasonInfo extends React.Component {
+  componentDidUpdate() {
+    const element = ReactDOM.findDOMNode(this);
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
+  }
+
   render() {
     const season = this.props.season;
     const imgUrl =
