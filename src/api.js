@@ -1,4 +1,4 @@
-const BASE_URL = 'http://api.tvmaze.com';
+const BASE_URL = 'https://api.tvmaze.com';
 
 export const searchShows = searchTerm => {
   const url = `/search/shows?q=${searchTerm}`;
