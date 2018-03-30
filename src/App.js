@@ -6,6 +6,7 @@ import './App.css';
 import SearchResultList from './components/SearchResultList.jsx';
 
 import ShowInfo from './components/ShowInfo';
+import ShowDetails from './components/ShowDetails';
 import { searchShows } from './api';
 
 const Header = () => {
@@ -61,6 +62,7 @@ class App extends Component {
           />
           <ShowInfo show={this.state.selectedShow} />
         </div>
+        <ShowDetails show={this.state.selectedShow} />
       </div>
     );
   }

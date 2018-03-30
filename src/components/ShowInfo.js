@@ -72,9 +72,6 @@ export default class ShowInfo extends React.Component {
             dangerouslySetInnerHTML={{ __html: show.summary }}
           />
         </div>
-        <div className="show-info_explore">
-          <a href="#">Explore</a>
-        </div>
       </div>
     ) : null;
   }
