@@ -7,7 +7,6 @@ import SeasonInfo from './SeasonInfo';
 export default class ShowDetails extends React.Component {
   constructor(props) {
     super(props);
-    this.getSeasonsByShowId = this.getSeasonsByShowId.bind(this);
   }
 
   state = {
@@ -16,14 +15,14 @@ export default class ShowDetails extends React.Component {
     episodes: undefined
   };
 
-  async getSeasonsByShowId(showId) {
+  getSeasonsByShowId = async showId => {
     const seasons = await getSeasonsByShowId(showId);
     this.setState({
       seasons: seasons,
       selectedSeason: undefined,
       episodes: undefined
     });
-  }
+  };
 
   componentDidMount() {
     const show = this.props.show; // HARDCODED

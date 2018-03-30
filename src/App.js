@@ -20,11 +20,14 @@ const Header = () => {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
   }
   state = { searchTerm: '', searchResults: [], selectedShow: undefined };
 
-  async handleSearchSubmit(searchTerm) {
+  handleSearchSubmit = async searchTerm => {
+    if (searchTerm === this.state.searchTerm) {
+      return;
+    }
+
     const searchResults = await searchShows(searchTerm);
     console.log(searchResults);
     this.setState({
@@ -32,7 +35,7 @@ class App extends Component {
       searchResults: searchResults,
       selectedShow: undefined
     });
-  }
+  };
 
   handleSearchItemClick = show => {
     this.setState(
