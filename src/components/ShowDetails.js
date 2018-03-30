@@ -19,7 +19,9 @@ export default class ShowDetails extends React.Component {
   async getSeasonsByShowId(showId) {
     const seasons = await getSeasonsByShowId(showId);
     this.setState({
-      seasons: seasons
+      seasons: seasons,
+      selectedSeason: undefined,
+      episodes: undefined
     });
   }
 
@@ -32,7 +34,11 @@ export default class ShowDetails extends React.Component {
     const { show } = nextProps;
     show
       ? this.getSeasonsByShowId(show.id)
-      : this.setState({ seasons: undefined });
+      : this.setState({
+          seasons: undefined,
+          selectedSeason: undefined,
+          episodes: undefined
+        });
   }
 
   handleSeasonClick = seasonId => {
