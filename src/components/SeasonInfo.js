@@ -19,7 +19,7 @@ export default class SeasonInfo extends React.Component {
         <img
           className="season-info_img"
           src={imgUrl}
-          alt={`Season ${season.number} Cover Image`}
+          alt={`Season ${season.number} Cover`}
         />
         <div className="season-info_summary">
           <div className="season-info_title">Season {season.number}</div>

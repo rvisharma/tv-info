@@ -11,7 +11,7 @@ class SearchResultItem extends React.Component {
     return (
       <li className="search-result-list-item">
         <a
-          href="#"
+          href=""
           onClick={this.handleShowTitleClick}
           className="search-result-title"
         >
