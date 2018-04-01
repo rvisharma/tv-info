@@ -1,6 +1,7 @@
 {
   "short_name": "TV Series Info",
   "name": "TV Series Info",
+  "description": "TV Series Info PWA using TV Maze API, built using React.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -15,6 +16,6 @@
   ],
   "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#00FF00",
-  "background_color": "#00FF00"
+  "theme_color": "#537895",
+  "background_color": "#537895"
 }
