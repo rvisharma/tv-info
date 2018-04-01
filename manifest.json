@@ -5,13 +5,8 @@
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "192x192 64x64 32x32 24x24 16x16",
+      "sizes": "192x192 64x64 32x32 24x24 16x1",
       "type": "image/x-icon"
-    },
-    {
-      "src": "splash.png",
-      "sizes": "533x533",
-      "type": "image/png"
     }
   ],
   "start_url": "./index.html",
