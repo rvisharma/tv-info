@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class SeasonList extends React.Component {
+export default class SeasonList extends React.PureComponent {
   onSeasonClick = seasonId => evt => {
     evt.preventDefault();
     this.props.onSeasonClick(seasonId);

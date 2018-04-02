@@ -5,7 +5,7 @@ import SeasonList from './SeasonList';
 import SeasonInfo from './SeasonInfo';
 import EpisodeList from './EpisodeList';
 
-export default class ShowDetails extends React.Component {
+export default class ShowDetails extends React.PureComponent {
   state = {
     seasons: undefined,
     selectedSeason: undefined,
@@ -22,7 +22,7 @@ export default class ShowDetails extends React.Component {
   };
 
   componentDidMount() {
-    const show = this.props.show; // HARDCODED
+    const show = this.props.show;
     show && show.id && this.getSeasonsByShowId(show.id);
   }
 
@@ -45,6 +45,10 @@ export default class ShowDetails extends React.Component {
   };
 
   handleSeasonClick = seasonId => {
+    if (this.state.seasonId === seasonId) {
+      return;
+    }
+
     this.setState(state => {
       return {
         selectedSeason: state.seasons.filter(s => s.id === seasonId)[0]

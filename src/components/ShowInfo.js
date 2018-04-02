@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class ShowInfo extends React.Component {
+export default class ShowInfo extends React.PureComponent {
   render() {
     const { show } = this.props;
     const imgUrl = (show && show.image && show.image.medium) || '';

@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SearchResultItem extends React.Component {
+class SearchResultItem extends React.PureComponent {
   handleShowTitleClick = evt => {
     evt.preventDefault();
     this.props.onSearchItemClick(this.props.searchItem);
@@ -22,7 +22,7 @@ class SearchResultItem extends React.Component {
   }
 }
 
-class SearchResultList extends React.Component {
+class SearchResultList extends React.PureComponent {
   render() {
     const { searchResults, onSearchItemClick } = this.props;
 

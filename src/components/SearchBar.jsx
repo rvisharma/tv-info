@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SearchBar extends React.Component {
+class SearchBar extends React.PureComponent {
   handleSubmit = evt => {
     evt.preventDefault();
     const searchTerm = this.searchInputNode.value;

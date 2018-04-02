@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default class SeasonInfo extends React.Component {
+export default class SeasonInfo extends React.PureComponent {
   componentDidUpdate() {
     const element = ReactDOM.findDOMNode(this);
     if (element) element.scrollIntoView({ behavior: 'smooth' });

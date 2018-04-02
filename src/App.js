@@ -5,17 +5,10 @@ import './reset.css';
 import './App.css';
 import SearchResultList from './components/SearchResultList.jsx';
 
+import Header from './components/Header';
 import ShowInfo from './components/ShowInfo';
 import ShowDetails from './components/ShowDetails';
 import { searchShows } from './api';
-
-const Header = () => {
-  return (
-    <header className="header">
-      <h1>TV Series Info</h1>
-    </header>
-  );
-};
 
 class App extends Component {
   state = { searchTerm: '', searchResults: [], selectedShow: undefined };
@@ -26,7 +19,6 @@ class App extends Component {
     }
 
     const searchResults = await searchShows(searchTerm);
-    console.log(searchResults);
     this.setState({
       searchTerm,
       searchResults: searchResults,

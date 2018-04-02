@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class EpisodeList extends React.Component {
+export default class EpisodeList extends React.PureComponent {
   render() {
     const episodes = (this.props.episodes || []).filter(each =>
       Boolean(each.number)
