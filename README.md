@@ -1,8 +1,8 @@
 ## TODO
 
-[x] implement in react
+- [x] implement in react
 
-[ ] include redux
+- [ ] include redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
